@@ -5,7 +5,7 @@ var productService = require('../src/services/product-service')
 var nock = require('nock')
 
 describe('Product service', function () {
-  it('Should call remote service', async function () {
+  xit('Should call remote service', async function () {
     nock('https://mycluster.icp:8899/products')
       .get('/13')
       .delayBody(10)
@@ -18,7 +18,7 @@ describe('Product service', function () {
     expect(weight).toBe(15.5)
   })
 
-  it('Should handle unexpected response structure', async function () {
+  xit('Should handle unexpected response structure', async function () {
     nock('https://mycluster.icp:8899/products')
       .get('/19')
       .reply(200, {
